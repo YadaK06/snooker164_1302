@@ -444,6 +444,7 @@ GameObject:
   - component: {fileID: 1392179327}
   - component: {fileID: 1392179326}
   - component: {fileID: 1392179325}
+  - component: {fileID: 1392179329}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -484,7 +485,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -546,6 +547,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0.24, z: 0}
+--- !u!114 &1392179329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392179324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81ef613a3713d84a9e89b8cb2204d35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Test
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
