@@ -1,6 +1,6 @@
 using System;
 using UnityEngine;
-
+using UnityEngine.InputSystem;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     
     [SerializeField]
     private GameObject ballPrefabs;
+
+    [SerializeField]
+    private GameObject cueball;
 
     public static GameManager instance;
 
@@ -35,7 +38,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+            Shootball();
     }
 
     private void SetBall(BallColor col, int i)
@@ -45,5 +49,11 @@ public class GameManager : MonoBehaviour
                                      Quaternion.identity);
         Ball b = obj.GetComponent<Ball>();
         b.SetColor(col);
+    }
+
+    private void Shootball()
+    {
+        Rigidbody rd  = cueball.GetComponent<Rigidbody>();
+        rd.AddRelativeForce(Vector3.forward * 50, ForceMode.Impulse);
     }
 }
