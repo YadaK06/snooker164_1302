@@ -48,6 +48,9 @@ public class GameManager : MonoBehaviour
         SetBall(BallColor.Blue, 5);
         SetBall(BallColor.Pink, 6);
         SetBall(BallColor.Black, 7);
+
+        if(Setting.fromSave)
+            LoadGame();
     }
 
     // Update is called once per frame
@@ -68,6 +71,9 @@ public class GameManager : MonoBehaviour
 
         if (Keyboard.current.backspaceKey.wasPressedThisFrame)
             StopBall();
+
+        if (Keyboard.current.leftShiftKey.isPressed)
+            SaveGame();
     }
 
     private void SetBall(BallColor col, int i)
@@ -125,5 +131,28 @@ public class GameManager : MonoBehaviour
     {
         notitext.text = s;
 
+    }
+
+    public void SaveGame()
+    {
+        StopBall();
+        if (cueball != null )
+        {
+            PlayerPrefs.SetFloat("cueBallPosX", cueball.transform.position.x);
+            PlayerPrefs.SetFloat("cueBallPosX", cueball.transform.position.y);
+            PlayerPrefs.SetFloat("cueBallPosX", cueball.transform.position.z);
+            Debug.Log("Saved");
+        }
+    }
+
+    public void LoadGame()
+    {
+        if (cueball != null)
+        {
+            float x = PlayerPrefs.GetFloat("cueBallPosx");
+            float y = PlayerPrefs.GetFloat("cueBallPosx");
+            float z = PlayerPrefs.GetFloat("cueBallPosx");
+            Debug.Log("Loaded");
+        }
     }
 }
