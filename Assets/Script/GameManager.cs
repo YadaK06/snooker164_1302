@@ -72,8 +72,10 @@ public class GameManager : MonoBehaviour
         if (Keyboard.current.backspaceKey.wasPressedThisFrame)
             StopBall();
 
-        if (Keyboard.current.leftShiftKey.isPressed)
+        if (Keyboard.current.leftShiftKey.isPressed && Keyboard.current.sKey.wasPressedThisFrame)
+        {
             SaveGame();
+        }
     }
 
     private void SetBall(BallColor col, int i)
@@ -152,6 +154,7 @@ public class GameManager : MonoBehaviour
             float x = PlayerPrefs.GetFloat("cueBallPosx");
             float y = PlayerPrefs.GetFloat("cueBallPosx");
             float z = PlayerPrefs.GetFloat("cueBallPosx");
+
             Debug.Log("Loaded");
         }
     }
