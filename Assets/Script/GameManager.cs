@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Start() 
     {
         CameraBehideCueball();
 
@@ -73,9 +73,7 @@ public class GameManager : MonoBehaviour
             StopBall();
 
         if (Keyboard.current.leftShiftKey.isPressed && Keyboard.current.sKey.wasPressedThisFrame)
-        {
             SaveGame();
-        }
     }
 
     private void SetBall(BallColor col, int i)
@@ -141,8 +139,8 @@ public class GameManager : MonoBehaviour
         if (cueball != null )
         {
             PlayerPrefs.SetFloat("cueBallPosX", cueball.transform.position.x);
-            PlayerPrefs.SetFloat("cueBallPosX", cueball.transform.position.y);
-            PlayerPrefs.SetFloat("cueBallPosX", cueball.transform.position.z);
+            PlayerPrefs.SetFloat("cueBallPosY", cueball.transform.position.y);
+            PlayerPrefs.SetFloat("cueBallPosZ", cueball.transform.position.z);
             Debug.Log("Saved");
         }
     }
@@ -151,9 +149,11 @@ public class GameManager : MonoBehaviour
     {
         if (cueball != null)
         {
-            float x = PlayerPrefs.GetFloat("cueBallPosx");
-            float y = PlayerPrefs.GetFloat("cueBallPosx");
-            float z = PlayerPrefs.GetFloat("cueBallPosx");
+            float x = PlayerPrefs.GetFloat("cueBallPosX");
+            float y = PlayerPrefs.GetFloat("cueBallPosY");
+            float z = PlayerPrefs.GetFloat("cueBallPosZ");
+
+            cueball.transform.position = new Vector3(x, y, z);
 
             Debug.Log("Loaded");
         }

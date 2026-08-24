@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Loading");
     }
 
-    public void LoadaveGame()
+    public void LoadsaveGame()
     {
         Setting.fromSave = true;
         SceneManager.LoadScene("Loading");

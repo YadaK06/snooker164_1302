@@ -175,6 +175,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5207774774141830365, guid: eef0e4e9344d5524bb32bc69b0a49a2c, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8024075965052415815, guid: eef0e4e9344d5524bb32bc69b0a49a2c, type: 3}
       propertyPath: m_Name
       value: CueBall
