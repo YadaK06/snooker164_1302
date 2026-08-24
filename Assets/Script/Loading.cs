@@ -10,8 +10,8 @@ public class Loadding : MonoBehaviour
 
     [SerializeField]
     private float waitSeconds = 1f;
-
-    void update()
+    
+    void Update()
     {
         if (waitSeconds  > 0f)
         waitSeconds -= Time.deltaTime;

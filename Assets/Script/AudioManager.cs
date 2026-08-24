@@ -1,43 +1,43 @@
-using UnityEngine;
+//using UnityEngine;
 
-public class AudioManager : MonoBehaviour
-{
-    [SerializeField]
-    private AudioSource[] bgm;
+//public class AudioManager : MonoBehaviour
+//{
+//    [SerializeField]
+//    private AudioSource[] bgm;
 
-    [SerializeField]
-    private AudioSource[] sfx;
+//    [SerializeField]
+//    private AudioSource[] sfx;
 
-    [SerializeField]
-    private AudioSource[] mixer;
+//    [SerializeField]
+//    private AudioSource[] mixer;
 
 
-    public static AudioManager instance;
+//    public static AudioManager instance;
 
-    void Awake()
-    {
-        instance = this;
-    }
+//    void Awake()
+//    {
+//        instance = this;
+//    }
 
-    private void StopALLBGM()
-    {
-        for (int i = 0; i < bgm.Length; i++)
-        {
-            bgm[i].Stop();
-        }
-    }
+//    private void StopALLBGM()
+//    {
+//        for (int i = 0; i < bgm.Length; i++)
+//        {
+//            bgm[i].Stop();
+//        }
+//    }
 
-    public void PlayBGM(int i)
-    {
-        StopALLBGM();
-        if (i <  bgm.Length)
-            bgm[i].Play();
-    }
+//    public void PlayBGM(int i)
+//    {
+//        StopALLBGM();
+//        if (i <  bgm.Length)
+//            bgm[i].Play();
+//    }
 
-    public void PlaySFX(int i)
-    {
-        if (i < sfx.Length)
-            sfx[i].PlayOneShot();
-    }
+//    public void PlaySFX(int i)
+//    {
+//        if (i < sfx.Length)
+//            sfx[i].PlayOneShot();
+//    }
 
-}
+//}
