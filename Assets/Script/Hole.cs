@@ -19,6 +19,7 @@ public class Hole : MonoBehaviour
                 GameManager.instance.ShowscoreText(b.Point);
             }
             Destroy(b.gameObject);
+            AudioManager.instance.PlaySFX(0);
         }
     }
 }

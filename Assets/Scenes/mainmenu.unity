@@ -698,7 +698,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 458dd8822518c4f37bc3edba9b6c57d9, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.8
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1102,7 +1102,7 @@ GameObject:
   - component: {fileID: 990888078}
   - component: {fileID: 990888082}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: f
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1598,7 +1598,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 84e427d6b66ab4066b6a4dcd0ce819ee, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1854,7 +1854,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: df729d213c4be44a9b55cd109f5cd4f9, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2327,6 +2327,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e66daa427f2e764419166f36e9db8cbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  bgm:
+  - {fileID: 555190022}
+  sfx:
+  - {fileID: 1412149429}
+  - {fileID: 2063559520}
+  - {fileID: 1098403843}
+  mixer: {fileID: 24100000, guid: 96446633b87bec2489e770d651041761, type: 2}
 --- !u!4 &2029111328
 Transform:
   m_ObjectHideFlags: 0
@@ -2336,7 +2343,7 @@ Transform:
   m_GameObject: {fileID: 2029111326}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 413.8452, y: 477.02914, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2389,7 +2396,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: a931da70ee74947d5a047de583170ade, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0

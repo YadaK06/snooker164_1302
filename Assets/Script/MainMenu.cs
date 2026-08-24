@@ -2,6 +2,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
+    void Start()
+    {
+        AudioManager.instance.PlayBGM(0);
+    }
+
     public void StartNewGame()
     {
         Setting.fromSave = false;
