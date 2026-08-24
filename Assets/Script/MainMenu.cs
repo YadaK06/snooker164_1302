@@ -40,4 +40,10 @@ public class MainMenu : MonoBehaviour
     {
         AudioManager.instance.AdjustMasterVolume(volume);
     }
+    public void Restart()
+    {
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(currentSceneName);
+        Time.timeScale = 1;
+    }
 }
