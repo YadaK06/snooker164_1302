@@ -1,11 +1,16 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField]
     private GameObject adjustpanel;
+
+    [SerializeField]
+    private Slider volumeSlider;
     void Start()
     {
+        volumeSlider.value = AudioManager.instance.LoadCurrentMasterVolume();
         AudioManager.instance.PlayBGM(0);
     }
 
@@ -29,5 +34,10 @@ public class MainMenu : MonoBehaviour
     public void ShowHideAdjustpanel(bool flag)
     {
         adjustpanel.SetActive(flag);
+    }
+
+    public void SetVolume(float volume)
+    {
+        AudioManager.instance.AdjustMasterVolume(volume);
     }
 }
